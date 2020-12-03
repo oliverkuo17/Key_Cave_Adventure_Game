@@ -4,8 +4,7 @@ from tkinter import filedialog
 from tkinter import simpledialog
 from PIL import Image, ImageTk
 
-__author__ = "{{Yi-chi Kuo}} ({{45257908}})"
-__email__ = "yichi.kuo@uqconnect.edu.au"
+__author__ = "Yi-Chi (Oliver) Kuo"
 __date__ = "30 oct 2020"
 
 TASK_ONE = 1
