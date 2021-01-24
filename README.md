@@ -9,4 +9,4 @@ Ibis can have extra moves by eating banana, and can go back to its prior positio
 
 Players can save, load, restart, and get high scores in the menu.
 
-<img src="images/sc_bar.PNG" width="600" height="600">
+<img src="images/sc_bar.PNG" width="800" height="800">
