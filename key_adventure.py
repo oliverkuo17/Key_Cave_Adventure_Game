@@ -1,4 +1,5 @@
 import tkinter as tk
+import glob
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
@@ -226,27 +227,27 @@ class AdvancedDungeonMap(AbstractGrid):
         dungeon_grid = dungeon_grid.split('\n')
 
         # adds images and keeps references for later use
-        image = Image.open('door.gif')
+        image = Image.open('./images/door.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.door_img = door_img = ImageTk.PhotoImage(image)
 
-        image = Image.open('wall.gif')
+        image = Image.open('./images/wall.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.wall_img = wall_img = ImageTk.PhotoImage(image)
 
-        image = Image.open('player.gif')
+        image = Image.open('./images/player.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.player_img = player_img = ImageTk.PhotoImage(image)
 
-        image = Image.open('key.gif')
+        image = Image.open('./images/key.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.key_img = key_img = ImageTk.PhotoImage(image)
 
-        image = Image.open('moveIncrease.gif')
+        image = Image.open('./images/moveIncrease.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.move_increase_img = move_increase_img = ImageTk.PhotoImage(image)
 
-        image = Image.open('empty.gif')
+        image = Image.open('./images/empty.gif')
         image = image.resize((self._cell_size,self._cell_size))
         self._master.empty_img = empty_img = ImageTk.PhotoImage(image)
 
@@ -333,7 +334,7 @@ class StatusBar(tk.Frame):
         self._frame2 = tk.Frame(self)
         self._frame2.pack(side=tk.LEFT)
 
-        clock = Image.open("clock.gif")
+        clock = Image.open("./images/clock.gif")
         clock = clock.resize((40,60))
         clock_img = ImageTk.PhotoImage(clock)
 
@@ -351,7 +352,7 @@ class StatusBar(tk.Frame):
         self._frame3 = tk.Frame(self)
         self._frame3.pack(side=tk.LEFT,padx=60) ##
 
-        lightning = Image.open("lightning.gif")
+        lightning = Image.open("./images/lightning.gif")
         lightning = lightning.resize((40,60))
         lightning_img = ImageTk.PhotoImage(lightning)
 
@@ -384,7 +385,7 @@ class AdvancedStatusBar(StatusBar):
         self._frame4 = tk.Frame(self)
         self._frame4.pack(side=tk.LEFT)
 
-        lives = Image.open("lives.gif")
+        lives = Image.open("./images/lives.gif")
         lives = lives.resize((50,50))
         lives_img = ImageTk.PhotoImage(lives)
 
@@ -969,7 +970,7 @@ class GameApp:
 
 def main():
     root = tk.Tk()
-    app = GameApp(root,task=TASK_ONE,dungeon_name="game2.txt")
+    app = GameApp(root,task=MASTERS,dungeon_name="game2.txt")
     root.mainloop()
 
 if __name__ == "__main__":
