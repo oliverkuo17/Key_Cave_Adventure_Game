@@ -1,5 +1,4 @@
 import tkinter as tk
-import glob
 from tkinter import messagebox
 from tkinter import filedialog
 from tkinter import simpledialog
